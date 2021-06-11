@@ -245,16 +245,19 @@ Use get20s to do the following:
 Example born in 1901 and died in 1959 - included -- born in 1889 and died in 1925 not included
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
-function get20s(array, key, string){
-    
+
+function get20s(array, string){
+  const newArray = [];
+    for(let i =0; i < array.length; i++){
+        if(array[i] === ("1900 - 2000")){
+            newArray.push(array[i]);
+        }
     }
+    return newArray;
+}
+
 
  
-
-
-
-      
-
 
 
 
@@ -268,16 +271,16 @@ function get20s(array, key, string){
  For example, if removeArtist is invoked with the artists array and the number 0, it will remove Amedeo Modigliani from our dataset and return the number 19. */
 
 function removeArtist(array, number){
-   for(let i = 0; i < array.length; i++){
-     if(array[i] === number){
-      array.splice(i, 1);
-     }
+    for(let i = 0; i < array.length;i++){
+      if(array[i] === number){
+          array.splice(i, 1);
+      }
   
-   }
+    }
    return array.length;
 }
    
-console.log('task 5', removeArtist(artists, 15));
+console.log('task 5', removeArtist(artists, 19));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use addArtist to do the following: 
@@ -308,8 +311,6 @@ function addArtist(array){
   }
 
 
-  
-
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Use lotsOfArt to do the following: 
 1. Receive an array 
@@ -317,9 +318,10 @@ Use lotsOfArt to do the following:
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
-function lotsOfArt(array){
+function lotsOfArt(array, paintings){
   
 }
+
 
 
 
